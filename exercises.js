@@ -88,6 +88,13 @@ console.log(kicks);
   console.log the object
 */
 
+var plainBox = {};
+
+plainBox.color = 'blue';
+plainBox.size = 17;
+plainBox.contents = [];
+
+console.log(plainBox);
 
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:

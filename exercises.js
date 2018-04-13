@@ -410,21 +410,31 @@ console.log(stockCarWithDriver);
         'Victor, age 19, is riding dirty!'
  */
 
- var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
- var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
+var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
 
- /* function addPassengers(car,names,ages){
+var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
 
-    for(var i=0;i<names.length,i++)
-    buildPerson(names(plainPerson,))
-    car.passengers = names;
+//var currentPerson = {}; 
+
+  function addPassengers(car,names,ages){
+    
+    for (var i=0;i<passengerList.length && i<passengerAges.length;i++){
+    var currentPerson = {};    
+    buildPerson(currentPerson /* object */,names[i] /*name array index*/,ages[i] /*age array index*/); 
+    car.passengers.push(currentPerson) }
     return car;
  }
 
- console.log(addPassengers(stockCar,passengerList,4));
-*/
+ var WTF = addPassengers(stockCar,passengerList,passengerAges);
+ console.log(WTF);
 
+ //Okay why did var currentPerson have to be a local variable??
 
+ function displayPassengers(car){
+    
+    for (var i=0; i<car.passengers.length ; i++){ 
+    console.log(car.passengers[i].name + ', age ' + car.passengers[i].age + ', is riding dirrrty!')
+    }
+ }
 
-console.log(buildPerson(plainPerson,'Ron',5));
-console.log(buildPerson(plainPerson,'Sam',6));
+displayPassengers(stockCar);

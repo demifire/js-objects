@@ -140,8 +140,8 @@ var plainPerson = {};
 
 function buildPerson(person, nameString, age){
 
-    plainPerson.name = nameString; 
-    plainPerson.age = age;
+    person.name = nameString; 
+    person.age = age;
     return person;
 }
 
@@ -409,3 +409,22 @@ console.log(stockCarWithDriver);
         'Marifel, age 19, is riding dirty!'
         'Victor, age 19, is riding dirty!'
  */
+
+ var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
+ var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
+
+ /* function addPassengers(car,names,ages){
+
+    for(var i=0;i<names.length,i++)
+    buildPerson(names(plainPerson,))
+    car.passengers = names;
+    return car;
+ }
+
+ console.log(addPassengers(stockCar,passengerList,4));
+*/
+
+
+
+console.log(buildPerson(plainPerson,'Ron',5));
+console.log(buildPerson(plainPerson,'Sam',6));

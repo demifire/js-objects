@@ -257,6 +257,18 @@ var sumObj = {
     result: undefined
 };
 
+var sumMoreObj = {
+    a: 72,
+    b: 94,
+    result:undefined
+};
+
+var evenMoreDaKine = {
+    a: 51056510651051,
+    b: 940904840840840848400849840848*8,
+    result: undefined
+}
+
 function objectAddition(object){
 
     console.log(object.a + object.b);
@@ -284,6 +296,23 @@ console.log(returnFinishedObject);
         Invoke this function and pass in your object. Further test by changing the values of the object being passed in or 
         **create more** objects and invoke your function multiple times.
  */
+
+ function printObj(object){
+
+    console.log(object.a + ' + ' + object.b + ' = ' + object.result);
+    object.output = object.a + ' + ' + object.b + ' = ' + object.result;
+    return object;
+ }
+
+ console.log(printObj(sumObj));
+
+
+ objectAddition(sumMoreObj);
+ var testDaSumMoreOne = printObj(sumMoreObj);
+ console.log(testDaSumMoreOne);
+
+ objectAddition(evenMoreDaKine);
+ console.log(printObj(evenMoreDaKine));
 
 
 /*

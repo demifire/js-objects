@@ -111,7 +111,7 @@ var stockCar = {
 
     model: 'Dodge', 
     year: 2015,
-    automaticTransmission: true,
+    automaticTransmission: false,
     driver: null,
     passengers: []
 
@@ -145,7 +145,7 @@ function buildPerson(person, nameString, age){
     return person;
 }
 
-var completePerson = buildPerson(plainPerson, 'Chaz', 26);
+var completePerson = buildPerson(plainPerson, 'Jesus', 43);
 console.log(completePerson);
 
 /*
@@ -347,6 +347,13 @@ console.log(plainBoxResult);
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
 
+ function detectingTransmission(object){
+     if (object.automaticTransmission === true){ return 'Automatic Transmission yo'}else{return 'Stay Manual breh'}
+ }
+
+ var isAutomaticTransmission = detectingTransmission(stockCar);
+ console.log(isAutomaticTransmission);
+
 
 /*
 12.  Who's driving this thing?!
@@ -360,8 +367,15 @@ console.log(plainBoxResult);
       your results. Consider using `plainPerson` as your driver.
  */
 
+function addDriver(object,person){
 
+    object.driver = person;
+    console.log(person.name + ' take the wheel!'); 
+    return object;
+}
 
+var stockCarWithDriver = addDriver(stockCar,plainPerson);
+console.log(stockCarWithDriver);
 
 /*
     #Final Boss

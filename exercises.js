@@ -228,6 +228,7 @@ console.log(completePerson);
 
   function printOrders(orders){
       for(i=0;i<orders.length;i++){
+        console.log('====');
         console.log('id: ' + orders[i].id);
         console.log('Purchase Date: ' + orders[i].date);
         console.log('Purchase Total: ' + orders[i].total);
@@ -235,6 +236,7 @@ console.log(completePerson);
 }
 
 printOrders(arrayOfObjects);
+
 
   /*
 8. Addition with an object
@@ -248,6 +250,22 @@ printOrders(arrayOfObjects);
         Invoke your function and pass in your object, store the result to a variable named sumObjResult and use `console.log` 
         to inspect your results.
 */
+
+var sumObj = {
+    a: 3,
+    b: 4,
+    result: undefined
+};
+
+function objectAddition(object){
+
+    console.log(object.a + object.b);
+    object.result = object.a + object.b;
+    return object;
+}
+
+var returnFinishedObject = objectAddition(sumObj);
+console.log(returnFinishedObject);
 
 
 /*
